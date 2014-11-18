@@ -1,0 +1,23 @@
+<a href="#/add" class="btn btn-primary">Add Employee</a>
+<div style="margin-top: 12px;"></div>
+<table ng-controller="mainController" class="table table-striped table-bordered">
+    <thead>
+    <th>Name&nbsp;</th>
+    <th>Email&nbsp;</th>
+    <th>Location&nbsp;</th>
+    <th>DOB&nbsp;</th>
+    <th>Action&nbsp;</th>
+</thead>
+<tbody>
+    <tr ng-repeat="data in employees">
+        <td>{{ data.emp_name}}</td>
+        <td>{{ data.emp_location}}</td>
+        <td>{{ data.emp_dob}}</td>
+        <td>{{ data.emp_addrr}}</td>
+        <td>
+            <a href="#edit/{{ data.emp_id}}">Edit</a> |
+            <a href="javasript:;" ng-click="delete(data.emp_id)">Delete</a>
+        </td>
+    </tr>
+</tbody>
+</table>

@@ -1,0 +1,39 @@
+<div class="container" ng-controller="addController">
+    <div class="row"><h2 class="col-md-offset-4 col-md-4 text-center">{{ action}} Employee</h2></div>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-5 ">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Name</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" ng-model="employees.emp_name" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Location</label>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" ng-model="employees.emp_location" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Date of Birth</label>
+                    <div class="col-md-9">
+                        <input ng-model="employees.emp_dob" type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">Address</label>
+                    <div class="col-md-9">
+                        <input ng-model="employees.emp_addrr" type="text" class="form-control" />
+                    </div>
+                </div> 
+
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button ng-click="addEmployee(employees)" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
